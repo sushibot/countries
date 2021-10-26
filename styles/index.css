@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul,
+li {
+  list-style-type: none;
+}
+body {
+  min-height: 100vh;
+}
+.country-list-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+.country-list-item {
+  padding: 1rem;
+  border: 1px solid black;
+}

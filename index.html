@@ -8,8 +8,45 @@
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
+    <header>
+      <section
+        style="background-color: var(--neutral-dark-blue); padding: 1.75rem"
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+          "
+        >
+          <h3>Where in the world?</h3>
+          <p>Dark Mode</p>
+        </div>
+      </section>
+    </header>
     <main class="container">
-      <section>
+      <section
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+        "
+      >
+        <fieldset>
+          <input type="text" />
+        </fieldset>
+        <fieldset>
+          <select name="" id="">
+            <option value="africa">Africa</option>
+          </select>
+        </fieldset>
+      </section>
+      <section class="country-list-container">
         <ul id="country-list" class="country-list-layout"></ul>
       </section>
     </main>

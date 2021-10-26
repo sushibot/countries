@@ -11,8 +11,10 @@ const list_item = (country) => {
   img.src = country.flags.png;
   img.alt = `${country.name} flag`;
   img.style.width = "100%";
+  img.style.height = "100%";
   img.style.borderRadius = "8px 8px 0 0";
   img_container.style.width = "100%";
+  img_container.style.height = "180px";
   img_container.append(img);
 
   const detail_list = country_detail_list(country);
@@ -28,7 +30,7 @@ const country_detail_list = (country) => {
   const list_parent = document.createElement("ul");
   const list_item = document.createElement("li");
   const label_items = ["Population", "Region", "Capital"];
-
+  list_parent.classList.add("country-detail-list-item-container");
   label_items.forEach((label_item) => {
     country_detail_list_item(country, label_item, list_item);
   });

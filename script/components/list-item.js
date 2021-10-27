@@ -14,13 +14,13 @@ const list_item = (country) => {
   img.style.borderRadius = "8px 8px 0 0";
   img_container.style.width = "100%";
   img_container.style.height = "180px";
-  img_container.append(img);
 
   const detail_list = country_detail_list(country);
   text_container.classList.add("country-list-item__text-container");
   h4.textContent = country.name;
-  text_container.append(h4, detail_list);
   li.classList.add("country-list-item");
+  img_container.append(img);
+  text_container.append(h4, detail_list);
   li.append(img_container, text_container);
   return li;
 };

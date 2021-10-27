@@ -1,6 +1,7 @@
 :root {
   --neutral-dark-blue: hsl(209, 23%, 22%);
   --neutral-very-dark-blue: hsl(207, 26%, 17%);
+  --border-radius-8: 8px;
 }
 
 h1,
@@ -29,6 +30,9 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+input {
+  outline: none;
+}
 h4 {
   letter-spacing: 1px;
 
@@ -54,6 +58,57 @@ body {
   min-height: 100vh;
   background-color: var(--neutral-very-dark-blue);
 }
+
+.fieldset-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.custom-input-fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.custom-input {
+  padding: 1rem 1rem 1rem 3rem;
+  width: 65%;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background: var(--neutral-dark-blue);
+}
+.custom-select-fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.icon {
+  color: white;
+  position: absolute;
+  padding: 17px;
+  min-width: 40px;
+}
+.custom-select {
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 25%;
+  color: white;
+  background: var(--neutral-dark-blue);
+}
+select > option {
+  border: none;
+  padding: 1rem;
+  color: white;
+  background: var(--neutral-dark-blue);
+}
+
 .container {
   /* padding: 1rem; */
   width: 100%;
@@ -73,7 +128,7 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
-.fieldset-container {
+.text-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

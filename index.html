@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Countries</title>
     <link rel="stylesheet" href="./styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/15d5547ffa.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -17,20 +21,29 @@
       </section>
     </header>
     <main class="container">
-      <section class="fieldset-container">
-        <fieldset>
-          <input type="text" />
+      <section class="text-container">
+        <fieldset class="fieldset-container">
+          <div class="custom-input-fieldset">
+            <i class="fas fa-search icon"></i>
+            <input
+              type="text"
+              class="custom-input"
+              placeholder="Search for a country..."
+            />
+          </div>
         </fieldset>
-        <fieldset>
-          <select name="" id="">
-            <option value="africa">Africa</option>
-          </select>
+        <fieldset class="fieldset-container">
+          <div class="custom-select-fieldset">
+            <select class="custom-select" name="" id="">
+              <option value="africa">Africa</option>
+            </select>
+          </div>
         </fieldset>
       </section>
       <section class="country-list-container">
         <ul id="country-list" class="country-list-layout"></ul>
       </section>
     </main>
+    <script type="module" src="./script/index.js"></script>
   </body>
-  <script type="module" src="./script/index.js"></script>
 </html>

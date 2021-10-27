@@ -1,5 +1,4 @@
 const list_item = (country) => {
-  console.log(country);
   const li = document.createElement("li");
   const h4 = document.createElement("h4");
 

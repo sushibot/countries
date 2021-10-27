@@ -129,12 +129,15 @@ select > option {
   margin: 0 auto;
 }
 .text-container {
+  padding: 0 2rem;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 .country-list-container {
+  padding: 0 2rem;
 }
 .country-list-layout {
   display: grid;
@@ -157,7 +160,22 @@ select > option {
   margin-bottom: 0.5rem;
 }
 @media screen and (max-width: 720px) {
+  .country-list-container {
+    padding: unset;
+  }
+  .custom-select-fieldset {
+    justify-content: unset;
+  }
+  .custom-input-fieldset {
+    margin-bottom: 1rem;
+  }
+  .text-container {
+    flex-direction: column;
+    padding: unset;
+  }
   .container {
+    max-width: unset;
+    width: unset;
     padding: 2rem 4rem;
   }
   .country-list-item {

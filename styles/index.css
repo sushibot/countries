@@ -88,11 +88,20 @@ body {
   justify-content: flex-end;
   position: relative;
 }
-.icon {
+.icon-text-input {
   color: white;
   position: absolute;
   padding: 17px;
   min-width: 40px;
+}
+.icon {
+  color: white;
+  margin-right: 0.5rem;
+}
+.dark-mode-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .custom-select {
   border: none;

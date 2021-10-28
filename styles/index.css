@@ -189,6 +189,7 @@ select > option {
   }
   .country-list-item {
     margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
   .country-list-item__text-container {
     padding: 2rem 2rem 0;

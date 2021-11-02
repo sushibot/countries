@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Countries</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./styles/index.css" />
     <script
       src="https://kit.fontawesome.com/15d5547ffa.js"
@@ -26,28 +33,66 @@
     </header>
     <main class="container">
       <section class="text-container">
-        <fieldset class="fieldset-container">
-          <div class="custom-input-fieldset">
-            <i class="fas fa-search icon-text-input"></i>
-            <input
-              type="text"
-              class="custom-input"
-              placeholder="Search for a country..."
-            />
-          </div>
-        </fieldset>
-        <fieldset class="fieldset-container">
-          <div class="custom-select-fieldset">
-            <select class="custom-select" name="" id="">
-              <option value="africa">Africa</option>
-            </select>
-          </div>
-        </fieldset>
+        <div class="custom-input-fieldset">
+          <i class="fas fa-search icon-text-input"></i>
+          <input
+            type="text"
+            class="custom-input"
+            placeholder="Search for a country..."
+          />
+        </div>
+
+        <div class="dropdown dropdown-container">
+          <button
+            class="btn btn-secondary dropdown-toggle dropdown-custom"
+            type="button"
+            id="filterDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filter by Region
+          </button>
+          <ul
+            class="dropdown-menu dropdown-custom__list"
+            aria-labelledby="filterDropdown"
+          >
+            <li>
+              <a class="dropdown-item dropdown-custom__list-item" href="#"
+                >Africa</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-custom__list-item" href="#"
+                >Asia</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-custom__list-item" href="#"
+                >America</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-custom__list-item" href="#"
+                >Europe</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-custom__list-item" href="#"
+                >Oceania</a
+              >
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="country-list-container">
         <ul id="country-list" class="country-list-layout"></ul>
       </section>
     </main>
-    <script type="module" src="./script/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
+  <script type="module" src="./script/index.js"></script>
 </html>

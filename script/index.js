@@ -13,9 +13,12 @@ const fetch_all_countries = () => {
       console.log(error);
     });
 };
+const initialize = () => {
+  fetch_all_countries();
+};
 
 const search_country = () => {};
 const filter_region = () => {};
 const view_country_details = () => {};
 
-fetch_all_countries();
+initialize();

@@ -86,6 +86,7 @@ body {
 .dropdown-custom {
   background-color: var(--neutral-dark-blue);
   border: none;
+  padding: 0 1.5rem;
 }
 .dropdown-custom__list {
   border: none;

@@ -1,6 +1,7 @@
 const list_item = (country) => {
   const li = document.createElement("li");
   const h4 = document.createElement("h4");
+  const a = document.createElement("a");
 
   const text_container = document.createElement("section");
 
@@ -21,15 +22,23 @@ const list_item = (country) => {
   li.classList.add("country-list-item");
   img_container.append(img);
   text_container.append(h4, detail_list);
+
+  navigate_to_country_details_page({ li, country });
   li.append(img_container, text_container);
   return li;
 };
-
+const navigate_to_country_details_page = ({ li, country }) => {
+  li.addEventListener("click", () => {
+    window.localStorage.setItem("country", JSON.stringify(country));
+    window.location.href = "./pages/country-detail.html";
+  });
+};
 const country_detail_list = (country) => {
   const list_parent = document.createElement("ul");
   const list_item = document.createElement("li");
   const label_items = ["Population", "Region", "Capital"];
   list_parent.classList.add("country-detail-list-item-container");
+
   label_items.forEach((label_item) => {
     country_detail_list_item(country, label_item, list_item);
   });
@@ -40,8 +49,10 @@ const country_detail_list = (country) => {
 
 const country_detail_list_item = (country, label_item, list_item) => {
   const label = document.createElement("label");
+
   const p = document.createElement("p");
   const div = document.createElement("div");
+
   label.textContent = `${label_item}: `;
   label.style.paddingRight = "0.25rem";
   p.textContent =
@@ -55,4 +66,5 @@ const country_detail_list_item = (country, label_item, list_item) => {
   list_item.append(div);
   return list_item;
 };
+
 export default list_item;
